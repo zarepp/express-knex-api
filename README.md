@@ -1,4 +1,4 @@
-# iada-api
+# express-knex-api
 
 How to run development:
 
@@ -28,4 +28,4 @@ CREATE SCHEMA public;
 GRANT ALL ON SCHEMA public TO postgres;
 GRANT ALL ON SCHEMA public TO public;
 ```
-# express-knex-api
+
