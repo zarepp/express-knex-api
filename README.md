@@ -16,17 +16,6 @@ How to run development:
 
 How to run on staging environment
 
-1. Check data. Check migrations & seeds data.
-
-    ```console
-    $ ssh iadapekan_staging 'docker exec -t <container_name> npx knex migrate:list'
-    $ ssh iadapekan_staging 'docker exec -t api_iadapekan_com npx knex migrate:list'
-    $ ssh iadapekan_staging 'docker exec -t api_iadapekan_com npx knex migrate:latest'
-    $ ssh iadapekan_staging 'docker exec -t api_iadapekan_com npx knex migrate:rollback'
-    ```
-
-2. Run. Use github action deployment. Read more -> https://docs.iadapekan.com/docs/system/deployment-manual
-
 
 ## Notes
 
