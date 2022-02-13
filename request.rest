@@ -1,0 +1,91 @@
+GET http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiS3lsZSIsImlhdCI6MTYzNzU4OTE0MX0.Oo_OMgCfeAeqe9wCtMmf6ssVuvIdiwo2hIiQ5oJT43k
+
+
+#####
+
+POST http://localhost:4000/auth/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "ali@yopmail.com",
+    "password": "password"
+}
+
+######
+GET http://localhost:3000/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFsaSIsImVtYWlsIjoiYWxpQHlvcG1haWwuY29tIiwicm9sZSI6Im9mZmljZXIiLCJpYXQiOjE2MzgwMTI0ODcsImV4cCI6MTYzODAxMjUxN30.BhKs58fF5R3zGKujGWRKvG4IaSP596qXDKqyuPwWmD0
+
+#####
+
+GET http://localhost:3000/auth/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFsaSIsImVtYWlsIjoiYWxpQHlvcG1haWwuY29tIiwicm9sZSI6Im9mZmljZXIiLCJpYXQiOjE2MzgyNzY3ODMsImV4cCI6MTYzODI3NjgxM30.xoPtTzSLFN8Hcvq78ja_cjATqqnVtqqf6jTzTSO4CIM
+
+####
+POST http://localhost:3000/user HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE0ODBlOWZlLWM4YTQtNGRlNy05M2ExLWM3ZGRiMGY3ZmUyOCIsIm5hbWUiOiJBbGkiLCJlbWFpbCI6ImFsaUB5b3BtYWlsLmNvbSIsImNyZWF0ZWRBdCI6IjIwMjItMDEtMTlUMTM6MDI6NDIuNDE3WiIsInVwZGF0ZWRBdCI6IjIwMjItMDEtMTlUMTM6MDI6NDIuNDE3WiIsInVzZXJJZCI6IjY3YTI3NzdkLTljNDYtNGMyYS05MmEzLTkzMmI2MWU1YmM4OSIsInJvbGVJZCI6Im9mZmljZXIiLCJpYXQiOjE2NDI1OTc4ODMsImV4cCI6MTY0MjU5ODc4M30.kxFrInFeBvrLpsTlZ9SF35G61SauXweW7xiI1AIn410
+
+{
+    "name": "ali 4",
+    "email": "ali4@yopmail.com",
+    "password": "$2a$10$OjW6zcDgWNGZKBLqB2qtUOMF7Wl.MR58cHpj6.mE0JLG58gG.Kc4e",
+    "role": "Staff"
+}
+
+#####
+
+GET http://localhost:3000/user?id=d09b0caf-e1b0-4929-acfb-f6f190088051
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQwOWIwY2FmLWUxYjAtNDkyOS1hY2ZiLWY2ZjE5MDA4ODA1MSIsIm5hbWUiOiJBbGkiLCJlbWFpbCI6ImFsaUB5b3BtYWlsLmNvbSIsInJvbGUiOiJvZmZpY2VyIiwiaWF0IjoxNjM4NDUyMTk5LCJleHAiOjE2Mzg0NTIyMjl9.HhUnzb1lMvMxXoG6CI0SYtiJoa3jUYXjtACbmXdtFiE
+
+#####
+
+POST http://localhost:3000/auth/refresh HTTP/1.1
+content-type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQwOWIwY2FmLWUxYjAtNDkyOS1hY2ZiLWY2ZjE5MDA4ODA1MSIsIm5hbWUiOiJBbGkiLCJlbWFpbCI6ImFsaUB5b3BtYWlsLmNvbSIsInJvbGUiOiJvZmZpY2VyIiwiaWF0IjoxNjM5MTYxNjg0LCJleHAiOjE2MzkxNjI1ODR9.SjGZK2vkci-n-YCRbkstltqewasbD-rRLmmLTdEMNJY
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQwOWIwY2FmLWUxYjAtNDkyOS1hY2ZiLWY2ZjE5MDA4ODA1MSIsIm5hbWUiOiJBbGkiLCJlbWFpbCI6ImFsaUB5b3BtYWlsLmNvbSIsInJvbGUiOiJvZmZpY2VyIiwiaWF0IjoxNjM5MTYxNjg0fQ.ftlkzisJaEUkqIVBIVv-kb6MNo4JxANryYHeqBb49tY"
+}
+
+#####
+
+POST http://localhost:3000/user/edit HTTP/1.1
+content-type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQwOWIwY2FmLWUxYjAtNDkyOS1hY2ZiLWY2ZjE5MDA4ODA1MSIsIm5hbWUiOiJBbGkiLCJlbWFpbCI6ImFsaUB5b3BtYWlsLmNvbSIsInJvbGUiOiJvZmZpY2VyIiwiaWF0IjoxNjM5MTYxNjg0LCJleHAiOjE2MzkxNjI1ODR9.SjGZK2vkci-n-YCRbkstltqewasbD-rRLmmLTdEMNJY
+
+{
+    "id": "8fb3b696-98ff-48ea-8155-e48180b050fe",
+    "name": "Bakar 5",
+    "email": "abu2@yopmail.com",
+    "role": "officer"
+}
+
+#####
+
+POST http://localhost:3000/sawah/add HTTP/1.1
+content-type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQwOWIwY2FmLWUxYjAtNDkyOS1hY2ZiLWY2ZjE5MDA4ODA1MSIsIm5hbWUiOiJBbGkiLCJlbWFpbCI6ImFsaUB5b3BtYWlsLmNvbSIsInJvbGUiOiJvZmZpY2VyIiwiaWF0IjoxNjM5MTYxNjg0LCJleHAiOjE2MzkxNjI1ODR9.SjGZK2vkci-n-YCRbkstltqewasbD-rRLmmLTdEMNJY
+
+{
+    "name": "test",
+    "mapName": "test",
+    "negeri": "test",
+    "daerah": "test",
+    "mukim": "test",
+    "seksyen": "test",
+    "lot": "test",
+    "keluasan": "test",
+    "namaPemilik": "test",
+    "alamatPemilik": "test",
+    "lat": 3.5761799359440265,
+    "lng": 103.37522693757322
+}
+
+#####
+
+GET http://localhost:3000/geran
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJlYTI3OTc4LThiODYtNDE0My04YThiLTY0NGFkYWYwYzVlNSIsIm5hbWUiOiJBbGkiLCJlbWFpbCI6ImFsaUB5b3BtYWlsLmNvbSIsImNyZWF0ZWRBdCI6IjIwMjItMDEtMTJUMTU6MDY6MTMuNDMxWiIsInVwZGF0ZWRBdCI6IjIwMjItMDEtMTJUMTU6MDY6MTMuNDMxWiIsInVzZXJJZCI6bnVsbCwicm9sZUlkIjpudWxsLCJpYXQiOjE2NDMxMjI0NTYsImV4cCI6MTY0MzEyMzM1Nn0.xNiJHtNrchKNUdGThegbZEpIMRMEykqEeNqzaKdQ97s
+
+#####
+GET http://localhost:3000/cerapan
